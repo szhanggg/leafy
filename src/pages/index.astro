@@ -1,108 +1,34 @@
 ---
 import PageLayout from "../components/PageLayout.astro";
+import First from "../components/indexPage/First.astro";
+import Second from "../components/indexPage/Second.astro";
+import Third from "../components/indexPage/Third.astro";
+import Fourth from "../components/indexPage/Fourth.astro";
+import Fifth from "../components/indexPage/Fifth.astro";
 ---
 
 <PageLayout>
-  <!-- First Section -->
-  <div
-    class="h-[90vh] relative flex flex-col justify-center md:items-start items-center px-4 md:px-0"
-  >
-    <!-- Main Section Contents -->
-    <div
-      class="md:pl-[10vw] flex flex-col items-center md:items-start md:w-1/3 text-center md:text-start"
-    >
-      <h1 class="md:text-7xl text-5xl font-bold text-shadow">Plant your</h1>
-      <h1 class="md:text-7xl text-5xl text-primary font-bold text-shadow">
-        future
-      </h1>
-      <p class="text-lg whitespace-normal mt-4">
-        Industry leaders in house plant development and maintenance.
-      </p>
-      <div class="mt-4 flex space-x-4">
-        <a
-          href="/careers"
-          class="px-4 py-2 bg-white text-black rounded shadow-md shadow-gray-500"
-          >Explore Careers</a
-        >
-        <a
-          href="/apply"
-          class="px-4 py-2 bg-primary text-white rounded shadow-md shadow-gray-500"
-          >Apply Now</a
-        >
-      </div>
-    </div>
+  <div class="w-full md:w-[80vw] absolute bottom-[10vh] right-0 -z-10">
+    <!-- Desktop image -->
+    <!-- https://pixabay.com/photos/plant-succulent-potted-white-space-2004483/ -->
+    <img
+      src="/images/backgrounds/indexpc.jpg"
+      class="w-full max-h-full object-cover object-right-bottom hidden md:block"
+    />
 
-    <div class="w-full md:w-[80vw] absolute bottom-0 right-0 -z-10">
-      <!-- Desktop image -->
-      <!-- https://pixabay.com/photos/plant-succulent-potted-white-space-2004483/ -->
-      <img
-        src="/images/backgrounds/indexpc.jpg"
-        class="w-full max-h-full object-cover object-right-bottom hidden md:block"
-      />
-
-      <!-- Mobile image -->
-      <!-- https://pixabay.com/photos/plant-succulent-potted-white-space-2004483/ -->
-      <img
-        src="/images/backgrounds/indexpc.jpg"
-        class="w-full max-h-full object-cover object-bottom md:hidden"
-      />
-    </div>
+    <!-- Mobile image -->
+    <!-- https://pixabay.com/photos/plant-succulent-potted-white-space-2004483/ -->
+    <img
+      src="/images/backgrounds/indexpc.jpg"
+      class="w-full max-h-full object-cover object-bottom md:hidden"
+    />
   </div>
 
-  <!-- Second Section -->
-  <div class="w-full bg-green-700 flex flex-col items-center py-8">
-    <img src="/images/other/plant.png" class="w-20 h-20" />
-    <h2 class="text-2xl text-white font-semibold md:w-1/3 text-center mt-4">
-      The Modern Solution to Interior Design and House Plant Integration
-    </h2>
-  </div>
-
-  <!-- Third Section -->
-  <div
-    class="flex flex-col items-center justify-center md:justify-between py-8 px-4 md:px-0 mt-12"
-  >
-    <!-- Section 1 -->
-    <div class="flex flex-col md:flex-row items-center md:w-[80vw] gap-20">
-      <!-- Image -->
-      <div class="mt-4 md:mt-0 md:ml-4">
-        <h2 class="text-4xl text-center md:text-left font-semibold">
-          We are Leafy.
-        </h2>
-        <p class="text-lg mt-2">
-          We provide <em class="not-italic text-primary">innovative</em>, <em
-            class="not-italic text-primary">modern</em
-          >
-           solutions to sprucing up your space with house plants. Whether it be
-          to lighten up an office, or liven up a living area, we have a package
-          for you. From the initial design, to the plant design, to the final
-          installation in your home, we will be with you every step of the way.
-        </p>
-      </div>
-      <img
-        src="/images/other/man.jpg"
-        class="h-[25vw] w-[25vw] object-cover object-top rounded-full"
-        alt="Section 1 Image"
-      />
-    </div>
-
-    <!-- Section 2 -->
-    <div class="flex flex-col md:flex-row items-center md:w-1/3 mt-8 md:mt-0">
-      <!-- Image -->
-      <img
-        src="https://example.com/image2.jpg"
-        class="w-full max-h-full object-cover object-top rounded-full"
-        alt="Section 2 Image"
-      />
-      <div class="mt-4 md:mt-0 md:ml-4">
-        <h2 class="text-2xl text-center md:text-left">Section 2 Header</h2>
-        <p class="text-lg mt-2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod,
-          nunc id aliquam lacinia, nisl nunc lacinia nunc, id aliquam nisl nunc
-          id aliquam.
-        </p>
-      </div>
-    </div>
-  </div>
+  <First />
+  <Second />
+  <Third />
+  <Fourth />
+  <Fifth />
 </PageLayout>
 
 <style>
