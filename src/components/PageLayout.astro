@@ -18,9 +18,20 @@ import Footer from "../components/Footer.astro";
     />
   </head>
   <NavBar />
-  <body>
+  <body class="h-screen">
     <slot />
     <Footer />
   </body>
 
+
+
+  <script>
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+
+    window.addEventListener("resize", () => {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty("--vh", `${vh}px`);
+    });
+  </script>
 </html>
