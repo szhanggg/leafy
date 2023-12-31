@@ -11,9 +11,6 @@ export default {
         secondary: "#D9EAD7",
         tertiary: "#ECF4EA",
       },
-      height: {
-        screen: "calc(var(--vh, 1vh) * 100)",
-      },
     },
   },
   plugins: [],

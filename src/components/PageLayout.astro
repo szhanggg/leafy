@@ -3,7 +3,7 @@ import NavBar from "../components/NavBar.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<html lang="en">
+<html lang="en" class="h-full">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -18,20 +18,10 @@ import Footer from "../components/Footer.astro";
     />
   </head>
   <NavBar />
-  <body class="h-screen">
+  <body class="h-full">
     <slot />
     <Footer />
   </body>
 
 
-
-  <script>
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty("--vh", `${vh}px`);
-
-    window.addEventListener("resize", () => {
-      let vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty("--vh", `${vh}px`);
-    });
-  </script>
 </html>
