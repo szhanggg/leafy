@@ -1,10 +1,10 @@
 <script>
-  function toggleMenu() {
-    const menu = document.getElementById("menu");
-    menu.classList.toggle("hidden");
-  }
+  const menuButton = document.querySelector("button");
+  menuButton.addEventListener("click", () => {
+    const mobmenu = document.getElementById("mobmenu");
+    mobmenu.classList.toggle("hidden");
+  });
 </script>
-
 <nav
   id="navbar"
   class="w-full bg-white top-0 flex items-center justify-between px-16 py-6 z-50 sticky border-b-2 border-green-700"
@@ -16,7 +16,7 @@
   </div>
 
   <!-- Hamburger menu button -->
-  <button class="md:hidden" onclick="toggleMenu()">
+  <button class="md:hidden z-50">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
@@ -42,5 +42,23 @@
     <a href="/growwithus" class="px-4 py-2 bg-primary text-white rounded"
       >Grow With Us</a
     >
+  </div>
+
+  <!-- Mobile Nav Menu opening from the Side -->
+  <div
+    id="mobmenu"
+    class="flex-col justify-end text-end absolute top-0 right-0 bg-card border-primary border-l-2 border-b-2 p-8 pt-16 md:hidden z-40"
+  >
+    <div class="flex flex-col items-end gap-4">
+      <!-- Navlinks -->
+      <a href="/" class="mr-4">Home</a>
+      <a href="/careers" class="mr-4">Careers</a>
+      <a href="/apply/2" class="mr-4">Join Us</a>
+
+      <!-- Button -->
+      <a href="/growwithus" class="px-4 py-2 bg-primary text-white rounded"
+        >Grow With Us</a
+      >
+    </div>
   </div>
 </nav>
