@@ -1,0 +1,86 @@
+---
+const benefits = [
+  {
+    title: "Health Insurance",
+    description:
+      "We provide health insurance for all our employees. We want to make sure that you are always in the best of health.",
+    icon: "/images/other/health.png",
+  },
+  {
+    title: "Unlimited PTO",
+    description:
+      "We believe in the importance of work-life balance. Take as much time off as you need.",
+    icon: "/images/other/vacations.png",
+  },
+  {
+    title: "401(k) Retirement Plan",
+    description:
+      "We want you to retire comfortably. We offer a 401(k) retirement plan to all our employees.",
+    icon: "/images/other/saving.png",
+  },
+  {
+    title: "Paid Family Leave",
+    description:
+      "We understand that family comes first. We offer our employees paid family leave of up to 12 weeks to gradually transition into their new lives. ",
+    icon: "/images/other/family.png",
+  },
+  {
+    title: "Remote-Friendly",
+    description:
+      "We offer remote work options to all our employees. Work from anywhere in the world.",
+    icon: "/images/other/remote.png",
+  },
+  {
+    title: "Flexible Schedule",
+    description:
+      "We understand that you have other commitments. We offer flexible work schedules to all our employees.",
+    icon: "/images/other/schedule.png",
+  },
+];
+---
+
+<div class="flex flex-col items-center mb-32 mt-14">
+  <h2 class="text-5xl font-semibold">Benefits</h2>
+  <p class="mt-4 md:w-1/3 text-center px-4">
+    We love our employees, and we only want the best for them. Employee benefits
+    include:
+  </p>
+  <div class="mx-8 mt-8 bg-tertiary rounded-md">
+    {
+      benefits.map((benefit) => (
+        <div class="flex flex-col items-start pb-4 pt-8 px-4 md:px-16 border-b border-gray-300 last:border-b-0">
+          <div class="flex justify-between items-center w-full">
+            <div class="flex items-center text-center">
+              <img src={benefit.icon} alt="Icon" class="w-10 h-10" />
+              <p class="text-xl ml-2">{benefit.title}</p>
+            </div>
+            <button class="expand-btn text-4xl transition-transform duration-500 transform rotate-0">
+              +
+            </button>
+          </div>
+          <p
+            class="benefit-details text-center px-4 md:px-8 transition-all max-h-0 overflow-hidden my-2"
+            style="max-height: 0; transition: max-height 0.5s ease-in-out;"
+          >
+            {benefit.description}
+          </p>
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll(".expand-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const details = btn.parentElement.nextElementSibling;
+      if (details.style.maxHeight === "0px") {
+        details.style.maxHeight = `${details.scrollHeight}px`;
+        btn.style.transform = "rotate(45deg)";
+      } else {
+        details.style.maxHeight = "0px";
+        btn.style.transform = "rotate(0deg)";
+      }
+    });
+  });
+</script>
