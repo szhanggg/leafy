@@ -1,0 +1,64 @@
+---
+import PageLayout from "../../components/PageLayout.astro";
+import ApplyLayout from "../../components/ApplyLayout.astro";
+import { jobs } from "../../websiteInfo";
+---
+
+<script>
+  const urlSearchParams = new URLSearchParams(window.location.search);
+  const params = Object.fromEntries(urlSearchParams.entries());
+  var id;
+  if (params.id) {
+    id = params.id;
+  }
+  if (!id) {
+    id = "none";
+  }
+
+  var jobListing = document.getElementById(id);
+  jobListing.style.display = "block";
+</script>
+
+<PageLayout>
+  <ApplyLayout>
+    {
+      jobs.map((job) => (
+        <div id={job.id} class="hidden shadow-lg">
+          <div class="flex-col bg-tertiary items-center justify-center text-center py-16 rounded-t-lg">
+            <h1 class="text-3xl font-semibold">{job.name}</h1>
+          </div>
+          <div class="flex-col bg-card items-center md:items-start px-4 md:px-20 py-12">
+            <h2 class="text-2xl text-primary">Job Description</h2>
+            <p>{job.description}</p>
+            <h2 class="text-2xl text-primary mt-8">Job Responsibilities</h2>
+            <ul class="list-disc ml-6">
+              {job.responsibilities.map((responsibility) => (
+                <li>{responsibility}</li>
+              ))}
+            </ul>
+            <h2 class="text-2xl text-primary mt-8">Required Qualifications</h2>
+            <ul class="list-disc ml-6">
+              {job.required.map((requirement) => (
+                <li>{requirement}</li>
+              ))}
+            </ul>
+            <h2 class="text-2xl text-primary mt-8">Preferred Qualifications</h2>
+            <ul class="list-disc ml-6">
+              {job.preferred.map((preference) => (
+                <li>{preference}</li>
+              ))}
+            </ul>
+            <div class="flex justify-center md:justify-end">
+              <a
+                href="/apply/2"
+                class="bg-primary text-white rounded-md px-2 md:px-4 py-2 text-center mt-6 inline-block"
+              >
+                Apply Now
+              </a>
+            </div>
+          </div>
+        </div>
+      ))
+    }
+  </ApplyLayout>
+</PageLayout>

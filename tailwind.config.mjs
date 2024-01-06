@@ -10,6 +10,7 @@ export default {
         primary: "#3FA929",
         secondary: "#D9EAD7",
         tertiary: "#ECF4EA",
+        card: "#FEFDFB",
       },
     },
   },

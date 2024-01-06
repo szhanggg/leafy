@@ -1,0 +1,103 @@
+---
+import PageLayout from "../../components/PageLayout.astro";
+import ApplyLayout from "../../components/ApplyLayout.astro";
+
+const inputs = [
+  "First Name",
+  "Last Name",
+  "Pronouns",
+  "Email",
+  "Phone Number",
+  "Address Line 1",
+  "Address Line 2",
+  "City",
+  "State",
+  "Zip Code",
+];
+---
+
+<PageLayout>
+  <ApplyLayout>
+    <div class="shadow-lg">
+      <div
+        class="flex-col bg-tertiary items-center justify-center text-center py-16 rounded-t-lg"
+      >
+        <h1 class="text-3xl font-semibold">Leafy Application</h1>
+      </div>
+      <div
+        class="flex-col bg-card items-center md:items-start px-4 md:px-20 py-12"
+      >
+        <h2 class="text-2xl text-primary mb-4">Personal</h2>
+        <div class="grid md:grid-cols-2 md:gap-x-16">
+          {
+            inputs.map((input) => (
+              <div>
+                <p>{input}</p>
+                <input
+                  type="text"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 mb-4"
+                />
+              </div>
+            ))
+          }
+        </div>
+        <h2 class="text-2xl text-primary mb-4">Links</h2>
+
+        <div class="grid md:grid-cols-2 md:gap-x-16">
+          <div>
+            <p>LinkedIn</p>
+            <input
+              type="text"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 mb-4"
+            />
+          </div>
+          <div>
+            <p>GitHub</p>
+            <input
+              type="text"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 mb-4"
+            />
+          </div>
+          <div>
+            <p>Other</p>
+            <input
+              type="text"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 mb-4"
+            />
+          </div>
+          <div>
+            <p>Resume/CV</p>
+            <input
+              class="block w-full text-sm p-2 text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50"
+              id="
+              file_input"
+              type="file"
+            />
+          </div>
+        </div>
+        <h2 class="text-2xl text-primary mb-4">Application Questions</h2>
+        <p>Why are you qualifed for this job?</p>
+        <textarea
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 mb-4 h-40"
+        ></textarea>
+        <h2 class="text-2xl text-primary mb-4">Work Authorization</h2>
+        <input
+          type="checkbox"
+          id="us_citizen"
+          name="work_auth"
+          value="us_citizen"
+        />
+        <label for="us_citizen">I am authorized to work in the U.S.</label>
+        <div class="flex justify-center
+          md:justify-end">
+          <button
+            class="bg-primary text-white rounded-md px-2
+          md:px-4 py-2 text-center mt-6 inline-block"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+  </ApplyLayout>
+</PageLayout>

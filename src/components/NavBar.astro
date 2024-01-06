@@ -3,22 +3,11 @@
     const menu = document.getElementById("menu");
     menu.classList.toggle("hidden");
   }
-
-  window.addEventListener("scroll", () => {
-    const navbar = document.getElementById("navbar");
-    if (window.scrollY > 0) {
-      navbar.classList.remove("bg-transparent");
-      navbar.classList.add("bg-white");
-    } else {
-      navbar.classList.remove("bg-white");
-      navbar.classList.add("bg-transparent");
-    }
-  });
 </script>
 
 <nav
   id="navbar"
-  class="w-full bg-transparent top-0 flex items-center justify-between px-16 py-6 z-50 sticky border-b-2 border-green-700"
+  class="w-full bg-white top-0 flex items-center justify-between px-16 py-6 z-50 sticky border-b-2 border-green-700"
 >
   <div class="flex items-center">
     <!-- Logo and Title -->
@@ -47,7 +36,7 @@
     <!-- Navlinks -->
     <a href="/" class="mr-4">Home</a>
     <a href="/careers" class="mr-4">Careers</a>
-    <a href="/apply" class="mr-4">Join Us</a>
+    <a href="/apply/2" class="mr-4">Join Us</a>
 
     <!-- Button -->
     <a href="/growwithus" class="px-4 py-2 bg-primary text-white rounded"
