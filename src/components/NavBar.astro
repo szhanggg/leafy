@@ -34,12 +34,46 @@
 
   <div id="menu" class="md:flex items-center md:items-center hidden gap-4">
     <!-- Navlinks -->
-    <a href="/" class="mr-4">Home</a>
-    <a href="/careers" class="mr-4">Careers</a>
-    <a href="/apply/2" class="mr-4">Join Us</a>
+    <!-- from https://birdeatsbug.com/blog/creating-hover-effects-with-tailwind-css -->
+    <a href="/" class="mr-4">
+      <p class="relative group hover:text-primary">
+        <span>Home</span>
+        <span
+          class="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-primary group-hover:w-1/2 group-hover:transition-all duration-200 mt-0.5"
+        ></span>
+        <span
+          class="absolute -bottom-1 right-1/2 w-0 h-0.5 bg-primary group-hover:w-1/2 group-hover:transition-all duration-200 mt-0.5"
+        ></span>
+      </p>
+    </a>
+
+    <a href="/" class="mr-4 hover:text-primary">
+      <p class="relative group">
+        <span>Careers</span>
+        <span
+          class="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-primary group-hover:w-1/2 group-hover:transition-all duration-200 mt-0.5"
+        ></span>
+        <span
+          class="absolute -bottom-1 right-1/2 w-0 h-0.5 bg-primary group-hover:w-1/2 group-hover:transition-all duration-200 mt-0.5"
+        ></span>
+      </p>
+    </a>
+    <a href="/" class="mr-4">
+      <p class="relative group hover:text-primary">
+        <span>Join Us</span>
+        <span
+          class="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-primary group-hover:w-1/2 group-hover:transition-all duration-200 mt-0.5"
+        ></span>
+        <span
+          class="absolute -bottom-1 right-1/2 w-0 h-0.5 bg-primary group-hover:w-1/2 group-hover:transition-all duration-200 mt-0.5"
+        ></span>
+      </p>
+    </a>
 
     <!-- Button -->
-    <a href="/growwithus" class="px-4 py-2 bg-primary text-white rounded"
+    <a
+      href="/growwithus"
+      class="px-4 py-2 bg-primary text-white rounded hover:bg-white hover:text-primary hover:shadow-[inset_0_0_0_0.5px_#3FA929] hover:transition-all duration-200"
       >Grow With Us</a
     >
   </div>
