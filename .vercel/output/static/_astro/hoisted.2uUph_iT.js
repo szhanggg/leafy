@@ -1,1 +1,0 @@
-import"./hoisted.vuJdZX9L.js";const i=new URLSearchParams(window.location.search),a=Object.fromEntries(i.entries());var e;a.id&&(e=a.id);e||(e="none");var r=document.getElementById(e);r.style.display="block";
