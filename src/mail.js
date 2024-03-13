@@ -25,7 +25,7 @@ const database = getDatabase(app);
 
 document.getElementById("appForm").addEventListener("submit", submitForm);
 
-function submitForm(e) {
+async function submitForm(e) {
     e.preventDefault();
 
     var Position = getElementVal("Position");
@@ -45,18 +45,22 @@ function submitForm(e) {
     var Qualifications = getElementVal("Qualifications");
     var Work_Auth = getElementVal("work_auth");
 
-    saveMessages(First_Name, Last_Name, Pronouns, Email, Phone_Number, Address_Line_1, Address_Line_2, City, State, Zip_Code, Position, LinkedIn, GitHub, Other, Qualifications, Work_Auth);
-
+    await saveMessages(First_Name, Last_Name, Pronouns, Email, Phone_Number, Address_Line_1, Address_Line_2, City, State, Zip_Code, Position, LinkedIn, GitHub, Other, Qualifications, Work_Auth);
+    console.log("ok");
     //   reset the form
-    document.getElementById("appForm").reset();
+    // document.getElementById("appForm").reset();
+
+    
     window.location.href = "/apply/3";
 }
 
-const saveMessages = (First_Name, Last_Name, Pronouns, Email, Phone_Number, Address_Line_1, Address_Line_2, City, State, Zip_Code, Position, LinkedIn, GitHub, Other, Qualifications, Work_Auth) => {
-    const newApplicationKey = push(ref(database, 'applications')).key;
-    const applicationRef = ref(database, 'applications/' + newApplicationKey);
+const saveMessages = async (First_Name, Last_Name, Pronouns, Email, Phone_Number, Address_Line_1, Address_Line_2, City, State, Zip_Code, Position, LinkedIn, GitHub, Other, Qualifications, Work_Auth) => {
+    const newApplicationKey = await push(ref(database, 'applications')).key;
+    const applicationRef = await ref(database, 'applications/' + newApplicationKey);
 
-    set(applicationRef, {
+    console.log("ASJDKLA")
+
+    await set(applicationRef, {
         First_Name: First_Name,
         Last_Name: Last_Name,
         Pronouns: Pronouns,
