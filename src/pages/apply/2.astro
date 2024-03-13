@@ -54,17 +54,16 @@ const required = [
         <div
           class="flex-col bg-card items-center md:items-start px-4 md:px-20 py-12"
         >
-          <h2 class="text-2xl text-primary mb-4">Position<em class="text-xs not-italic text-red-500">
-            *
-          </em></h2>
-          
-          
+          <h2 class="text-2xl text-primary mb-4">
+            Position<em class="text-xs not-italic text-red-500"> * </em>
+          </h2>
+
           <select
             id="Position"
             name="Position"
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 mb-4"
             required
-            >
+          >
             <option value=""></option>
             {
               jobs.map((job) => (
@@ -89,7 +88,8 @@ const required = [
                     type="text"
                     name={inputNames[index]}
                     id={inputNames[index]}
-                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 mb-4" required
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 mb-4"
+                    
                   />
                 </fragment>
               ))
@@ -146,15 +146,13 @@ const required = [
           >
           <div class="flex justify-center
           md:justify-end">
-            <button type="submit">Submit</button>
-            <!-- 
-          <a
-            href="/apply/3"
-            class="bg-primary text-white rounded-md px-2
+            <a
+              
+              class="bg-primary text-white rounded-md px-2
           md:px-4 py-2 text-center mt-6 inline-block shadow-lg"
-          >
-            Submit
-          </a>-->
+            >
+              <button type="submit">Submit</button>
+            </a>
           </div>
         </div>
       </form>

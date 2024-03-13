@@ -47,10 +47,9 @@ function submitForm(e) {
 
     saveMessages(First_Name, Last_Name, Pronouns, Email, Phone_Number, Address_Line_1, Address_Line_2, City, State, Zip_Code, Position, LinkedIn, GitHub, Other, Qualifications, Work_Auth);
 
-    console.log(First_Name, Last_Name, Pronouns, Email, Phone_Number, Address_Line_1, Address_Line_2, City, State, Zip_Code, Position, LinkedIn, GitHub, Other, Qualifications, Work_Auth)
-
     //   reset the form
     document.getElementById("appForm").reset();
+    window.location.href = "/apply/3";
 }
 
 const saveMessages = (First_Name, Last_Name, Pronouns, Email, Phone_Number, Address_Line_1, Address_Line_2, City, State, Zip_Code, Position, LinkedIn, GitHub, Other, Qualifications, Work_Auth) => {
