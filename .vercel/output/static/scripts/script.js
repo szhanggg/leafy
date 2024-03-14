@@ -1,1 +1,1 @@
-AOS.init({disable:"mobile"});
+window.onload=function(){"undefined"!=typeof AOS&&AOS.init({disable:"mobile"})};
