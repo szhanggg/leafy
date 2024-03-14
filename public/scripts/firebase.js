@@ -1,6 +1,11 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getDatabase, ref, set, push } from "firebase/database";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+import {
+  getDatabase,
+  ref,
+  set,
+  push,
+} from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
 //import { initializeApp } from 'firebase-admin/app';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -85,6 +90,7 @@ const saveMessages = async (
   Qualifications,
   Work_Auth
 ) => {
+  console.log("fml");
   const newApplicationKey = await push(ref(database, "applications")).key;
   const applicationRef = await ref(
     database,
