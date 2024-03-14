@@ -33,7 +33,7 @@ import { benefits } from "../../websiteInfo";
   </div>
 </div>
 
-<script>
+<script :client>
   document.querySelectorAll(".expand-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
       const details = btn.parentElement.nextElementSibling;
