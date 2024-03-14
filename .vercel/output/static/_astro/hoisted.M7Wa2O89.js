@@ -1,0 +1,1 @@
+import"./NavBar.astro_astro_type_script_index_0_lang.jZvHCOZ-.js";import"https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";import"https://unpkg.com/aos@2.3.1/dist/aos.js";const i=new URLSearchParams(window.location.search),e=Object.fromEntries(i.entries());var o;console.log(e);e.id&&(o=e.id);o||(o="none");var r=document.getElementById(o);r.style.display="block";
