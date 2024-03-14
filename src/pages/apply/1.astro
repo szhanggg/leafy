@@ -4,20 +4,23 @@ import ApplyLayout from "../../components/ApplyLayout.astro";
 import { jobs } from "../../websiteInfo";
 ---
 
-<script>
-  const urlSearchParams = new URLSearchParams(window.location.search);
-  const params = Object.fromEntries(urlSearchParams.entries());
-  var id;
-  console.log(params);
-  if (params.id) {
-    id = params.id;
-  }
-  if (!id) {
-    id = "none";
-  }
+<script :client>
+  window.onload = function () {
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    const params = Object.fromEntries(urlSearchParams.entries());
+    var id;
+    if (params.id) {
+      id = params.id;
+    }
+    if (!id) {
+      id = "none";
+    }
 
-  var jobListing = document.getElementById(id);
-  jobListing.style.display = "block";
+    var jobListing = document.getElementById(id);
+    if (jobListing) {
+      jobListing.style.display = "block";
+    }
+  };
 </script>
 
 <PageLayout>
