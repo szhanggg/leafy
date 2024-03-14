@@ -1,0 +1,1 @@
+import"https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";const e=document.querySelector("button");e.addEventListener("click",()=>{document.getElementById("mobmenu").classList.toggle("hidden")});

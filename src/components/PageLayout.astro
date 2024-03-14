@@ -38,17 +38,18 @@ import "../globals.css";
       href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js"></script>  </head>
-    
-    <NavBar />
-    <body class="h-full w-screen overflow-x-hidden">
-      <div class="overflow-x-hidden">
-        <slot />
-        <Footer />
-      </div>
-    <script src="/src/components/script.js"></script>
-  </body>
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js"
+    ></script>
+  </head>
 
+  <NavBar />
+  <body class="h-full w-screen overflow-x-hidden">
+    <div class="overflow-x-hidden">
+      <slot />
+      <Footer />
+    </div>
+    <!-- <script src="/src/components/script.js"></script> -->
+  </body>
 </html>
