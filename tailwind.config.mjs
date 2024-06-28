@@ -5,6 +5,9 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Work Sans", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
+        raleway: ["Raleway", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"]
       },
       colors: {
         primary: "#3FA929",
